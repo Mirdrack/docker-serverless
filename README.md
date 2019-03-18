@@ -1,6 +1,6 @@
 # Docker Serverless
 
-Docker tool to user serverless from a container
+Docker tool to use serverless framework from a container
 
 ## Specifications
 Based on `node:10-alpine9`
