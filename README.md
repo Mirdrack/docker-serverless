@@ -10,6 +10,6 @@ Serverless Version `1.39.0`
 ```
 docker run --rm -it \
     -v "$PWD":/usr/src/app \
-    mirdrack/serverless create --template aws-nodejs --path my-service
+    mirdrack/serverless sls create --template aws-nodejs --path my-service
 ```
 * Since `serverless` is defined as entry point you only need to complement the command

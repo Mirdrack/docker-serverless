@@ -1,10 +1,13 @@
 FROM node:10-alpine
 LABEL maintainer="mirdrack@gmail.com"
 
+
 # Install default services
-RUN chown -R $USER:$(id -gn $USER) /root/.config && \
-	npm install -g serverless
+# RUN mkdir /root/.config
+# RUN chown -R $USER:$(id -gn $USER) /root/.config
+RUN npm install -g serverless --ignore-scripts spawn-sync && \
+	apk add yarn
 
 # Set a default directory to work and set aws as entry point
 WORKDIR /usr/src/app
-ENTRYPOINT ["serverless"]
+CMD ["serverless"]
